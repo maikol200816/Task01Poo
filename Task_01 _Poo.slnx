@@ -1,1 +1,4 @@
-<Solution />
+<Solution>
+  <Project Path="Backend/Backend.csproj" />
+  <Project Path="Frotend/Frotend.csproj" />
+</Solution>
