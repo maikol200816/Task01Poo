@@ -12,8 +12,8 @@ public class Time
     private int _second;
 
 
+    //constructors
 
-    ////constructors
     public Time()
     {
         _hour = 0;
@@ -71,6 +71,7 @@ public class Time
         get => _second ;
         set => _second = ValidSecond(value);
     }
+    
     //methods
 
     public int ToMilliseconds()
@@ -142,8 +143,9 @@ public class Time
         else
             period = "AM";
 
-        if (displayHour >12)
-       
+        if (displayHour == 0)
+            displayHour = 12;
+        else if (displayHour > 12)
             displayHour -= 12;
 
         return $"{displayHour:00}:{Minute:00}:{Second:00}.{Millisecond:000} {period}";
