@@ -12,7 +12,7 @@ public class Time
     private int _second;
 
 
-    //constructors
+    //Constructors
 
     public Time()
     {
@@ -72,7 +72,7 @@ public class Time
         set => _second = ValidSecond(value);
     }
     
-    //methods
+    //Methods
 
     public int ToMilliseconds()
     {
