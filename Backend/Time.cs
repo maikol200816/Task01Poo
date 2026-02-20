@@ -12,8 +12,8 @@ public class Time
     private int _second;
 
 
-    //Properties
 
+    ////constructors
     public Time()
     {
         _hour = 0;
@@ -46,7 +46,7 @@ public class Time
     }
 
 
-
+    //Properties
     public int Hour 
     { 
         get => _hour; 
