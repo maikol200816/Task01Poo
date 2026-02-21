@@ -1,6 +1,4 @@
-﻿
-
-namespace Backend;
+﻿namespace Backend;
 
 public class Time
 {
@@ -22,21 +20,26 @@ public class Time
         _second = 0;
 
     }
+    
+    
     public Time(int hour)
     {
        Hour= hour; 
     }
+    
     public Time(int hour, int minute)
     {
        Hour= hour;
         Minute= minute;
     }
+    
     public Time(int hour, int minute, int second)
     {
         Hour = hour;
         Minute = minute;
         Second = second;
     }
+    
     public Time(int hour, int minute, int second, int millisecond)
     {
         Hour = hour;
@@ -47,6 +50,8 @@ public class Time
 
 
     //Properties
+
+
     public int Hour 
     { 
         get => _hour; 
@@ -72,6 +77,7 @@ public class Time
         set => _second = ValidSecond(value);
     }
     
+
     //Methods
 
     public int ToMilliseconds()
@@ -182,7 +188,7 @@ public class Time
     { 
         if(hour<0 || hour>23)
         {
-            throw new ArgumentOutOfRangeException(nameof(hour), $"the hour: {hour}, not es valid .");
+            throw new ArgumentOutOfRangeException(nameof(hour), $"The hour: {hour}, is not valid.");
         }
         return hour;
     }
@@ -192,7 +198,7 @@ public class Time
     {
         if (minute < 0 || minute > 59)
         {
-            throw new ArgumentOutOfRangeException(nameof(minute), $"the minute: {minute}, not es valid .");
+            throw new ArgumentOutOfRangeException(nameof(minute), $"The minute: {minute}, is not valid.");
         }
         return minute;
     }
@@ -200,7 +206,7 @@ public class Time
     {
         if (second < 0 || second > 59)
         {
-            throw new ArgumentOutOfRangeException(nameof(second), $"the second: {second}, not es valid .");
+            throw new ArgumentOutOfRangeException(nameof(second), $"The second: {second}, is not valid.");
         }
         return second;
     }
@@ -208,7 +214,7 @@ public class Time
     {
         if (millisecond < 0 || millisecond > 999)
         {
-            throw new ArgumentOutOfRangeException(nameof(millisecond), $"the millisecond: {millisecond}, not es valid .");
+            throw new ArgumentOutOfRangeException(nameof(millisecond), $"The millisecond: {millisecond}, is not valid.");
         }
         return millisecond;
     }
